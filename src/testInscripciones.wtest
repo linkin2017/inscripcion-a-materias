@@ -1,0 +1,24 @@
+import estudiantes.*
+import materias.*
+import careras.*
+
+//assert.that(true)
+
+describe'test de alumno'{
+	const mario = new Estudiante()
+	const ingenieria = new Carrera()
+	const abogacia = new Carrera()
+	
+test "un estudiante puede estar cursando varias carreras" {
+
+	mario.inscribirseEnCarrera(ingenieria)
+	assert.equals([ingenieria],mario.carrerasEnCurso())
+	mario.inscribirseEnCarrera(abogacia)
+	assert.equals([ingenieria,abogacia],mario.carrerasEnCurso())
+}	
+
+
+
+	
+}
+
